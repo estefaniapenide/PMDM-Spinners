@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ejemplosSpinners">
+        <item>Ejemplo 1</item>
+        <item>Ejemplo 2</item>
+        <item>Ejemplo 3</item>
+        <item>Ejemplo 4</item>
+        <item>Ejemplo 5</item>
+        <item>Ejemplo 6</item>
+    </string-array>
+    <string-array name="planetas" >
+        <item>Mercurio</item>
+        <item>Venus</item>
+        <item>Tierra</item>
+        <item>Marte</item>
+        <item>Júpiter</item>
+        <item>Saturno</item>
+        <item>Urano</item>
+        <item>Neptuno</item>
+    </string-array>
+</resources>

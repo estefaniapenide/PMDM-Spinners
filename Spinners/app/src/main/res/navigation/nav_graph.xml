@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.spinners.MainFragment"
+        android:label="@string/main_fragment_label"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_MainFragment_to_SpinnersFragment"
+            app:destination="@id/SpinnersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SpinnersFragment"
+        android:name="com.example.spinners.spinners.SpinnersFragment"
+        android:label="@string/spinners_fragment_label"
+        tools:layout="@layout/fragment_spinners">
+        <action
+            android:id="@+id/action_SpinnersFragment_to_ej1EntriesFragment"
+            app:destination="@id/ej1EntriesFragment" />
+        <action
+            android:id="@+id/action_SpinnersFragment_to_ej2OnItemSelectedFragment"
+            app:destination="@id/ej2OnItemSelectedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ej1EntriesFragment"
+        android:name="com.example.spinners.spinners.Ej1EntriesFragment"
+        android:label="Ej1EntriesFragment" />
+    <fragment
+        android:id="@+id/ej2OnItemSelectedFragment"
+        android:name="com.example.spinners.spinners.Ej2OnItemSelectedFragment"
+        android:label="Ej2OnItemSelectedFragment" />
+</navigation>
