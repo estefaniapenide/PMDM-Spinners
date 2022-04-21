@@ -25,6 +25,18 @@
         <action
             android:id="@+id/action_SpinnersFragment_to_ej2OnItemSelectedFragment"
             app:destination="@id/ej2OnItemSelectedFragment" />
+        <action
+            android:id="@+id/action_SpinnersFragment_to_ej3FromArrayFragment"
+            app:destination="@id/ej3FromArrayFragment" />
+        <action
+            android:id="@+id/action_SpinnersFragment_to_ej4FromResourcesFragment"
+            app:destination="@id/ej4FromResourcesFragment" />
+        <action
+            android:id="@+id/action_SpinnersFragment_to_ej5FromArrayListFragment"
+            app:destination="@id/ej5FromArrayListFragment" />
+        <action
+            android:id="@+id/action_SpinnersFragment_to_ej6Fragment"
+            app:destination="@id/ej6Fragment" />
     </fragment>
     <fragment
         android:id="@+id/ej1EntriesFragment"
@@ -34,4 +46,23 @@
         android:id="@+id/ej2OnItemSelectedFragment"
         android:name="com.example.spinners.spinners.Ej2OnItemSelectedFragment"
         android:label="Ej2OnItemSelectedFragment" />
+    <fragment
+        android:id="@+id/ej3FromArrayFragment"
+        android:name="com.example.spinners.spinners.Ej3FromArrayFragment"
+        android:label="Ej3FromArrayFragment" />
+    <fragment
+        android:id="@+id/ej4FromResourcesFragment"
+        android:name="com.example.spinners.spinners.Ej4FromResourcesFragment"
+        android:label="Ej4FromResourcesFragment"
+        tools:layout="@layout/fragment_ej4_from_resources" />
+    <fragment
+        android:id="@+id/ej5FromArrayListFragment"
+        android:name="com.example.spinners.spinners.Ej5FromArrayListFragment"
+        android:label="fragment_ej5_from_array_list"
+        tools:layout="@layout/fragment_ej5_from_array_list" />
+    <fragment
+        android:id="@+id/ej6Fragment"
+        android:name="com.example.spinners.spinners.Ej6Fragment"
+        android:label="fragment_ej6"
+        tools:layout="@layout/fragment_ej6" />
 </navigation>

@@ -6,15 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.example.spinners.databinding.FragmentEj2OnItemSelectedBinding
+import com.example.spinners.R
+import com.example.spinners.databinding.FragmentEj3FromArrayBinding
 
-class Ej2OnItemSelectedFragment : Fragment() {
-    private var _binding: FragmentEj2OnItemSelectedBinding? = null
+
+class Ej3FromArrayFragment : Fragment() {
+    private var _binding: FragmentEj3FromArrayBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        _binding = FragmentEj2OnItemSelectedBinding.inflate(inflater, container, false)
+        _binding = FragmentEj3FromArrayBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -28,6 +31,14 @@ class Ej2OnItemSelectedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val arrayPlanetas = arrayOf("Mercurio","Venus","Tierra","Marte","Júpiter","Saturno","Urano","Neptuno")
+
+        val arrayAdapter = ArrayAdapter(requireActivity(), R.layout.displayed_item,arrayPlanetas)
+
+        arrayAdapter.setDropDownViewResource(R.layout.list_items)
+
+        binding.spinner.adapter=arrayAdapter
 
         binding.spinner.setSelection(0,false)
 

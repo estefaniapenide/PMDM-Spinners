@@ -39,6 +39,10 @@ class SpinnersFragment : Fragment() {
                when(binding.spinner.selectedItemPosition){
                    0 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj1EntriesFragment()
                    1 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj2OnItemSelectedFragment()
+                   2 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj3FromArrayFragment()
+                   3 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj4FromResourcesFragment()
+                   4 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj5FromArrayListFragment()
+                   5 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj6Fragment()
                    else -> throw Exception("Excepción")
                }
            )

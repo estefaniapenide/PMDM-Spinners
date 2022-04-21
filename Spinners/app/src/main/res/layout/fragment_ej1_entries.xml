@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".spinners.SpinnersFragment">
+    tools:context=".spinners.Ej1EntriesFragment">
 
 
     <Button
@@ -32,7 +32,6 @@
         android:id="@+id/textViewItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ITEM:"
         app:layout_constraintBottom_toTopOf="@+id/textViewId"
         app:layout_constraintEnd_toEndOf="@+id/button_seleccionar"
         app:layout_constraintStart_toStartOf="@+id/button_seleccionar"

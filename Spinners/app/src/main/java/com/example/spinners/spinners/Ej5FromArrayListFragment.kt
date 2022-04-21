@@ -6,15 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.example.spinners.databinding.FragmentEj2OnItemSelectedBinding
+import com.example.spinners.R
+import com.example.spinners.databinding.FragmentEj5FromArrayListBinding
 
-class Ej2OnItemSelectedFragment : Fragment() {
-    private var _binding: FragmentEj2OnItemSelectedBinding? = null
+class Ej5FromArrayListFragment : Fragment() {
+    private var _binding: FragmentEj5FromArrayListBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        _binding = FragmentEj2OnItemSelectedBinding.inflate(inflater, container, false)
+        _binding = FragmentEj5FromArrayListBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -28,6 +30,24 @@ class Ej2OnItemSelectedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val planetas : MutableList<String> = ArrayList()//¿Por qué hay que hacerlo así? MIRAR LOS ARRAYLIST EN KOTLIN!!!
+        //val planetas : ArrayList<String> no deja añadir elementos a la lista, tampoco definiendola como var
+        planetas.add("Mercurio")
+        planetas.add("Venus")
+        planetas.add("Tierra")
+        planetas.add("Marte")
+        planetas.add("Júpiter")
+        planetas.add("Saturno")
+        planetas.add("Urano")
+        planetas.add("Neptuno")
+
+
+        val arrayAdapter =ArrayAdapter(requireActivity(),R.layout.displayed_item,planetas)
+
+        arrayAdapter.setDropDownViewResource(R.layout.list_items)
+
+        binding.spinner.adapter=arrayAdapter
 
         binding.spinner.setSelection(0,false)
 
