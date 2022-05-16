@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_MainFragment_to_SpinnersFragment"
             app:destination="@id/SpinnersFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_listViewFragment"
+            app:destination="@id/listViewFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_autocompletarFragment"
+            app:destination="@id/autocompletarFragment" />
     </fragment>
     <fragment
         android:id="@+id/SpinnersFragment"
@@ -35,8 +41,8 @@
             android:id="@+id/action_SpinnersFragment_to_ej5FromArrayListFragment"
             app:destination="@id/ej5FromArrayListFragment" />
         <action
-            android:id="@+id/action_SpinnersFragment_to_ej6Fragment"
-            app:destination="@id/ej6Fragment" />
+            android:id="@+id/action_SpinnersFragment_to_ej6DialogFragment"
+            app:destination="@id/ej6DialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/ej1EntriesFragment"
@@ -61,8 +67,43 @@
         android:label="fragment_ej5_from_array_list"
         tools:layout="@layout/fragment_ej5_from_array_list" />
     <fragment
-        android:id="@+id/ej6Fragment"
-        android:name="com.example.spinners.spinners.Ej6Fragment"
-        android:label="fragment_ej6"
-        tools:layout="@layout/fragment_ej6" />
+        android:id="@+id/ej6DialogFragment"
+        android:name="com.example.spinners.spinners.Ej6DialogFragment"
+        android:label="Ej06DialogFragment"
+        tools:layout="@layout/fragment_ej6_dialog" />
+    <fragment
+        android:id="@+id/listViewFragment"
+        android:name="com.example.spinners.listview.ListViewFragment"
+        android:label="fragment_list_view"
+        tools:layout="@layout/fragment_list_view" />
+    <fragment
+        android:id="@+id/autocompletarFragment"
+        android:name="com.example.spinners.autocompletar.AutocompletarFragment"
+        android:label="fragment_autocompletar"
+        tools:layout="@layout/fragment_autocompletar" >
+        <action
+            android:id="@+id/action_autocompletarFragment_to_ej01AutocompletarFragment"
+            app:destination="@id/ej01AutocompletarFragment" />
+        <action
+            android:id="@+id/action_autocompletarFragment_to_ej02AutocompletarFragment"
+            app:destination="@id/ej02AutocompletarFragment" />
+        <action
+            android:id="@+id/action_autocompletarFragment_to_ej03AutocompletarFragment"
+            app:destination="@id/ej03AutocompletarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ej01AutocompletarFragment"
+        android:name="com.example.spinners.autocompletar.Ej01AutocompletarFragment"
+        android:label="fragment_ej01_autocompletar"
+        tools:layout="@layout/fragment_ej01_autocompletar" />
+    <fragment
+        android:id="@+id/ej02AutocompletarFragment"
+        android:name="com.example.spinners.autocompletar.Ej02AutocompletarFragment"
+        android:label="fragment_ej02_autocompletar"
+        tools:layout="@layout/fragment_ej02_autocompletar" />
+    <fragment
+        android:id="@+id/ej03AutocompletarFragment"
+        android:name="com.example.spinners.autocompletar.Ej03AutocompletarFragment"
+        android:label="fragment_ej03_autocompletar"
+        tools:layout="@layout/fragment_ej03_autocompletar" />
 </navigation>

@@ -35,6 +35,14 @@ class MainFragment : Fragment() {
         binding.buttonSpinners.setOnClickListener {
             findNavController().navigate(MainFragmentDirections.actionMainFragmentToSpinnersFragment())
         }
+
+        binding.buttonListView.setOnClickListener{
+            findNavController().navigate(MainFragmentDirections.actionMainFragmentToListViewFragment())
+        }
+
+        binding.buttonAutocompletar.setOnClickListener{
+            findNavController().navigate(MainFragmentDirections.actionMainFragmentToAutocompletarFragment())
+        }
     }
 
 

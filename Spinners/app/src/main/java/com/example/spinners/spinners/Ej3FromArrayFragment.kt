@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import android.widget.Toast
 import com.example.spinners.R
 import com.example.spinners.databinding.FragmentEj3FromArrayBinding
 
@@ -48,6 +49,16 @@ class Ej3FromArrayFragment : Fragment() {
                 binding.textViewItem.text="ITEM: ${(view as TextView).text}"
                 binding.textViewId.text="ID: $id"
                 binding.textViewPosicion.text="POSICIÓN: $position"
+
+                val mensajeToast ="""OnItemSelectedListener:
+                    |parent.selectedItem= ${parent!!.selectedItem}
+                    |parent?.getItemAtPosition(position) = ${parent?.getItemAtPosition(position)}
+                    |(view as TextView).text = ${view.text}
+                    |position = $position
+                    |id = $id
+                """.trimMargin()
+
+                Toast.makeText(requireActivity(),mensajeToast, Toast.LENGTH_LONG).show()
 
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {}

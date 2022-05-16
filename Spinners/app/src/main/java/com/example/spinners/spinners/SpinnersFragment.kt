@@ -42,7 +42,7 @@ class SpinnersFragment : Fragment() {
                    2 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj3FromArrayFragment()
                    3 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj4FromResourcesFragment()
                    4 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj5FromArrayListFragment()
-                   5 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj6Fragment()
+                   5 -> SpinnersFragmentDirections.actionSpinnersFragmentToEj6DialogFragment()
                    else -> throw Exception("Excepción")
                }
            )

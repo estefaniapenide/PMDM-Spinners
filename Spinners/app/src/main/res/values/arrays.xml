@@ -18,4 +18,15 @@
         <item>Urano</item>
         <item>Neptuno</item>
     </string-array>
+    <string-array name="paises" >
+        <item>---</item>
+        <item>Italia</item>
+        <item>Francia</item>
+        <item>Alemania</item>
+        <item>Portugal</item>
+        <item>Grecia</item>
+        <item>Suiza</item>
+        <item>Irlanda</item>
+        <item>Noruega</item>
+    </string-array>
 </resources>
