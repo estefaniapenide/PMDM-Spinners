@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.TextView
+import android.widget.Toast
+import com.example.spinners.R
 import com.example.spinners.databinding.FragmentEj01AutocompletarBinding
 
 class Ej01AutocompletarFragment : Fragment() {
@@ -23,6 +27,13 @@ class Ej01AutocompletarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.autoCompleteTextView
+            .apply{setAdapter(ArrayAdapter.createFromResource(requireContext(), R.array.provincias,R.layout.displayed_item))}
+            .apply{threshold=1}
+            .apply{setOnItemClickListener { _, view, _, _ ->
+                Toast.makeText(requireContext(),"Click en ${(view as TextView).text}",Toast.LENGTH_SHORT).show()
+            }}
     }
 
 }
